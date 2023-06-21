@@ -1,0 +1,246 @@
+:root {
+	--nav-height: calc(1.3rem + 40px);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Helvetica", sans-serif;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+.underline {
+	border: 2px solid #ababab;
+	margin: 2rem;
+	margin-bottom: 5rem;
+}
+
+#acerca_de {
+	min-height: 100vh;
+	width: 100%;
+	background: radial-gradient(#565656, #000);
+}
+
+/*Barra de navegación*/
+
+.navbar {
+	top: 0;
+	position: fixed;
+	width: 100%;
+	height: var(--nav-height);
+	background: linear-gradient(90deg, #363636, #969696);
+}
+
+#navbar {
+	display: flex;
+}
+
+#navbar ul {
+	display: flex;
+	position: absolute;
+	margin: 20px auto;
+	font-size: 1.3rem;
+	right: 0;
+}
+
+li {
+	list-style-type: none;
+	margin: 0 15px;
+	padding: auto;
+}
+
+#acerca_de a {
+	color: #feeeef;
+}
+
+#acerca_de a:hover {
+	color: #ababab;
+	text-decoration: overline;
+}
+
+/*Acerca de*/
+
+.imagen {
+	width: 100%;
+	display: flex;
+}
+
+.imagen img {
+	border-radius: 50%;
+	border: 3px solid #aaa;
+	margin: auto;
+	margin-top: calc(1.3rem + 45px + 5%);
+	height: 300px;
+	box-shadow: 6px 6px 30px 0 #262626;
+}
+
+#welcome-section {
+	max-width: 100vw;
+}
+
+#welcome-section h1 {
+	text-align: center;
+	font-size: 3rem;
+	font-weight: 900;
+	color: #bbccdd;
+}
+
+#welcome-section h2 {
+	text-align: center;
+	font-size: 1.5rem;
+	font-style: italic;
+	color: #bbccdd;
+	padding-bottom: 30px;
+}
+
+/*Seccion de proyectos*/
+
+#projects {
+	background: radial-gradient(#676789, #4545ab);
+}
+
+.projects_section {
+	display: grid;
+	width: 100%;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 620px));
+	grid-gap: 3%;
+	justify-items: center;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+	padding-bottom: 4rem;
+}
+
+.project {
+	border: 1px solid #4545ab;
+	box-shadow: 10px 10px 8px 0 #343489;
+}
+
+/*GitHub Project*/
+
+.github {
+	background-color: #ddd;
+}
+
+#projects .project-tile {
+	width: 100%;
+	text-align: center;
+	padding-top: calc(var(--nav-height) + 20px);
+	font-size: 2.2rem;
+	color: #ababab;
+}
+
+.img-github {
+	max-width: 600px;
+	object-fit: cover;
+	padding: 10px;
+}
+
+.github-footer {
+	background-color: #666;
+	display: block;
+	text-align: center;
+	font-size: 2.2rem;
+	color: #c3c4c5;
+	padding: 15px;
+	opacity: .5;
+}
+
+.code {
+	color: #666;
+	transition: color 0.5s ease-out;
+}
+
+.github:hover .code {
+	color: #c3c4c5;
+}
+
+/*Seccion de contacto*/
+
+#contacto {
+	min-height: 100vh;
+	background: radial-gradient(#565656, #000);
+	padding-top: 10%;
+}
+
+#contacto .project-tile {
+	width: 100%;
+	text-align: center;
+	padding-top: calc(var(--nav-height) + 20px);
+	font-size: 4.3rem;
+	color: #ababab;
+}
+
+.contacto-ul {
+	display: flex;
+	width: 100%;
+	height: 30vh;
+	justify-content: center;
+	align-items: center;
+}
+
+.contacto-ul li {
+	width: fit-content;
+	height: fit-content;
+	font-size: 1.6rem;
+}
+
+.contacto-ul li a {
+	color: #bbbbbb;
+	font-weight: 700;
+}
+
+.contacto-ul li:hover {
+	padding-top: 20px;
+	transition: .25s linear;
+}
+
+.icon {
+	margin-right: 4px;
+}
+
+@media screen and (max-width: 780px) {
+	#contacto .project-tile {
+		font-size: 2.5rem;
+		padding-bottom: 40px;
+	}
+
+	.contacto-ul {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		text-align: center;
+	}
+
+	.contacto-ul li {
+		margin: 8px 0;
+		width: 100%;
+	}
+
+	.contacto-ul li:hover {
+		padding-top: 0;
+	}
+
+	.box-link:hover {
+		padding-left: 25px;
+	transition: .25s linear;
+	}
+}
+
+@media screen and (max-width: 620px) {
+	.projects_section {
+		grid-template-columns: repeat(auto-fit, minmax(200px, 500px));
+	}
+
+	.project-section {
+		width: 600px;
+	}
+
+	.img-github {
+		max-width: 400px;
+	}
+}
